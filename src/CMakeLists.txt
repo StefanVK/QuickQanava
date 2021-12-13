@@ -63,7 +63,6 @@ set (qan_plugin_files
 
 # Configure Qt
 set(CMAKE_AUTOMOC ON)
-qt_wrap_cpp(qan_source_files, qan_header_files)   # Creates .moc files from sources
 set(CMAKE_AUTORCC ON)
 set_property(DIRECTORY APPEND PROPERTY COMPILE_DEFINITIONS $<$<CONFIG:Debug>:QT_QML_DEBUG>)
 
