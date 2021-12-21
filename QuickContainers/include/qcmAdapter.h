@@ -78,7 +78,6 @@ struct adapter< QList, T > {
     inline static int   indexOf(const QList<T>& c, const T& t) { return c.indexOf(t); }
 };
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 template < typename T >
 struct adapter< QVector, T > {
     inline static void  reserve(QVector<T>& c, std::size_t size) { c.reserve(static_cast<int>(size)); }
@@ -96,7 +95,6 @@ struct adapter< QVector, T > {
     inline static bool  contains(const QVector<T>& c, const T& t) { return c.contains(t); }
     inline static int   indexOf(const QVector<T>& c, const T& t) { return c.indexOf(t); }
 };
-#endif
 
 template < typename T >
 struct adapter< QSet, T > {
